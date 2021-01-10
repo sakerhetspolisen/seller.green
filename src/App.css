@@ -20,5 +20,5 @@ img {
   100% {opacity: 1;}
 }
 @media screen and (max-width: 500px) {
-  img {width: 90vw;padding: 5vw;min-width: unset;}
+  img {width: 100vw;min-width: unset;}
 }
