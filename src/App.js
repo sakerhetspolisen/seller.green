@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import gif from './assets/karl2.gif';
 import './App.css';
+async function ticker() {
+  var states = ["Karl Sellergren", "arl Sellergren ", "rl Sellergren  ", "l Sellergren  K",
+  " Sellergren  Ka", "Sellergren  Karl", "ellergren  Karl ", "llergren  Karl S", "lergren  Karl Se",
+  "ergren  Karl Sel", "rgren  Karl Sell", "gren  Karl Selle", "ren  Karl Seller", "en  Karl Sellerg",
+  "n  Karl Sellergr", "  Karl Sellergre"];
+  var i;
+  while (true) {
+    for (i = 0; i < states.length; i++) {
+      document.title = states[i];
+      await sleep(1000);
+    } 
+  }
+}
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+ticker()
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img src={gif} alt="Karl Sellergrens office"/>
     </div>
   );
 }
